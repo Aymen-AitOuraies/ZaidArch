@@ -35,13 +35,16 @@ export default function ImgsAnimation() {
                 <div className="image-marquee-track no-scrollbar">
                     {[0, 1].map((groupIndex) => (
                         <div key={groupIndex} className="image-marquee-group">
-                            {images.map((image) => (
+                            {images.map((image, imageIndex) => (
                                 <article key={`${groupIndex}-${image.alt}`} className="image-marquee-card group relative overflow-hidden rounded-4xl">
                                     <ImageWithLoader
                                         src={image.src}
                                         alt={image.alt}
                                         wrapperClassName="h-full w-full"
                                         className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
+                                        loading={groupIndex === 0 ? "eager" : "lazy"}
+                                        fetchPriority={groupIndex === 0 && imageIndex === 0 ? "high" : "auto"}
+                                        minLoaderMs={120}
                                     />
                                     <div className="absolute inset-0 bg-primary-soft/65 transition-opacity duration-300 group-hover:opacity-0"></div>
                                 </article>

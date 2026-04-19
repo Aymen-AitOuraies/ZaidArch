@@ -7,6 +7,7 @@ export default function ImageWithLoader({
 	wrapperClassName = "",
 	loading = "lazy",
 	decoding = "async",
+	fetchPriority,
 	minLoaderMs = 220,
 }) {
 	const [isLoaded, setIsLoaded] = useState(false);
@@ -40,6 +41,7 @@ export default function ImageWithLoader({
 				alt={alt}
 				loading={loading}
 				decoding={decoding}
+				fetchPriority={fetchPriority}
 				className={`block ${className} transition-opacity duration-300 ${showImage ? "opacity-100" : "opacity-0"}`}
 				onLoad={() => setIsLoaded(true)}
 				onError={() => setIsLoaded(true)}
