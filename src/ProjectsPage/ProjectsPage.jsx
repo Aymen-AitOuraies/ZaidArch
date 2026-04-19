@@ -3,6 +3,7 @@ import projectImageOne from "../assets/images/ProjectsPage/1.png";
 import projectImageTwo from "../assets/images/ProjectsPage/2.png";
 import projectImageThree from "../assets/images/ProjectsPage/3.png";
 import useScrollReveal from "../hooks/useScrollReveal";
+import ImageWithLoader from "../components/ImageWithLoader";
 import "../animations/scrollReveal.css";
 
 export default function ProjectsPage() {
@@ -43,7 +44,7 @@ export default function ProjectsPage() {
 				>
 					<div className="flex flex-col items-center gap-4 md:min-h-120 md:justify-center">
 					<article className="w-72 rounded-3xl bg-neutral-background p-5 text-left shadow-[0_20px_45px_rgba(46,58,69,0.22)] transition-all duration-300 hover:z-50 hover:scale-105 md:absolute md:left-1/2 md:top-16 md:z-10 md:-translate-x-full md:rotate-[-10deg] md:hover:rotate-0 sm:w-76 md:w-80">
-						<img
+						<ImageWithLoader
 							src={projectImageTwo}
 							alt="Projet architectural premium"
 							className="h-48 w-full rounded-2xl object-cover"
@@ -55,7 +56,7 @@ export default function ProjectsPage() {
 					</article>
 
 					<article className="w-72 rounded-3xl bg-neutral-background p-5 text-left shadow-[0_20px_45px_rgba(46,58,69,0.22)] transition-all duration-300 hover:z-50 hover:scale-105 md:absolute md:left-1/2 md:-top-3 md:z-30 md:-translate-x-1/2 sm:w-76 md:w-80">
-						<img
+						<ImageWithLoader
 							src={projectImageOne}
 							alt="Projet architectural moderne"
 							className="h-48 w-full rounded-2xl object-cover"
@@ -67,7 +68,7 @@ export default function ProjectsPage() {
 					</article>
 
 					<article className="w-72 rounded-3xl bg-neutral-background p-5 text-left shadow-[0_20px_45px_rgba(46,58,69,0.22)] transition-all duration-300 hover:z-50 hover:scale-105 md:absolute md:left-1/2 md:top-16 md:z-20 md:translate-x-[2%] md:rotate-[8deg] md:hover:rotate-0 sm:w-76 md:w-80">
-							<img
+							<ImageWithLoader
 								src={projectImageThree}
 								alt="Projet architectural urbain"
 								className="h-48 w-full rounded-2xl object-cover"

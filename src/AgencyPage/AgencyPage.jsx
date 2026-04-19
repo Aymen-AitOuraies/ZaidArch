@@ -5,6 +5,7 @@ import creativiteIcon from "../assets/images/AgencyPage/icons/creativite.png";
 import ecouteIcon from "../assets/images/AgencyPage/icons/l'ecoute.png";
 import riguerIcon from "../assets/images/AgencyPage/icons/riguer.png";
 import useScrollReveal from "../hooks/useScrollReveal";
+import ImageWithLoader from "../components/ImageWithLoader";
 import "../animations/scrollReveal.css";
 
 export default function AgencyPage() {
@@ -35,15 +36,17 @@ export default function AgencyPage() {
 					style={{ "--reveal-delay": "220ms" }}
 				>
 					<div className="flex items-end gap-2 sm:gap-4">
-						<img
+						<ImageWithLoader
 							src={moroccoImage}
 							alt="Carte du Maroc"
-							className="h-48 w-auto sm:h-56 lg:h-64"
+							className="h-full w-auto"
+							wrapperClassName="h-48 sm:h-56 lg:h-64"
 						/>
-						<img
+						<ImageWithLoader
 							src={compassImage}
 							alt="Boussole"
-							className="h-16 w-auto translate-y-2 sm:h-20 lg:h-24"
+							className="h-full w-auto translate-y-2"
+							wrapperClassName="h-16 sm:h-20 lg:h-24"
 						/>
 					</div>
 
@@ -73,10 +76,10 @@ export default function AgencyPage() {
 
 				<div
 					data-reveal
-					className="reveal-on-scroll mt-20 flex w-full flex-col gap-10 lg:flex-row lg:items-start lg:justify-between"
+					className="reveal-on-scroll mt-20 flex w-full flex-col gap-10 lg:flex-row lg:items-center lg:justify-between"
 					style={{ "--reveal-delay": "320ms" }}
 				>
-					<div className="w-full max-w-2xl text-left">
+					<div className="w-full max-w-2xl text-left ">
 						<div className="mb-4 flex items-center justify-start gap-2 text-sm font-bold font-heading tracking-[0.2em] text-primary-default sm:text-base">
 							<span className="h-2 w-2 rounded-full bg-primary-default" aria-hidden="true"></span>
 							<span>VALEURS &amp; AVANTAGES</span>
@@ -101,7 +104,7 @@ export default function AgencyPage() {
 					</div>
 
 					<div className="w-full max-w-md lg:ml-auto">
-						<img
+						<ImageWithLoader
 							src={architectureImage}
 							alt="Architecture moderne"
 							className="h-56 w-full rounded-3xl object-cover shadow-[0_20px_45px_rgba(46,58,69,0.22)] sm:h-64"

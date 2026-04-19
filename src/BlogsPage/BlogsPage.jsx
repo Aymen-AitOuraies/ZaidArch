@@ -1,5 +1,6 @@
 import blogImage from "../assets/images/HomePage/1.png";
 import useScrollReveal from "../hooks/useScrollReveal";
+import ImageWithLoader from "../components/ImageWithLoader";
 import "../animations/scrollReveal.css";
 
 export default function BlogsPage() {
@@ -22,7 +23,7 @@ export default function BlogsPage() {
                     className="reveal-on-scroll group w-full max-w-64 overflow-hidden rounded-4xl bg-primary-dark shadow-[0_34px_90px_rgba(26,36,44,0.5),0_16px_36px_rgba(26,36,44,0.28),0_0_0_1px_rgba(247,245,242,0.08)] ring-1 ring-primary-default/20 sm:max-w-80"
                 >
                     <div className="relative cursor-pointer">
-                        <img
+                        <ImageWithLoader
                             src={blogImage}
                             alt="Article de blog architecture"
                             className="h-40 w-full object-cover sm:h-48"

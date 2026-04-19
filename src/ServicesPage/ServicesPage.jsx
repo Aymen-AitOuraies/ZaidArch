@@ -3,6 +3,7 @@ import serviceImage1 from "../assets/images/ServicesPage/1.png";
 import serviceImage2 from "../assets/images/ServicesPage/2.png";
 import serviceImage3 from "../assets/images/ServicesPage/3.png";
 import serviceImage4 from "../assets/images/ServicesPage/4.png";
+import ImageWithLoader from "../components/ImageWithLoader";
 import "./ServicesPage.css";
 
 const services = [
@@ -75,7 +76,7 @@ export default function ServicesPage() {
 							className="service-card group overflow-hidden rounded-3xl bg-neutral-backgroundAlt shadow-[0_14px_30px_rgba(26,36,44,0.2)]"
 							style={{ "--card-delay": `${index * 120}ms` }}
 						>
-							<img
+							<ImageWithLoader
 								src={service.image}
 								alt={service.title}
 								className="h-52 w-full object-cover transition-transform duration-500 group-hover:scale-105 sm:h-56"

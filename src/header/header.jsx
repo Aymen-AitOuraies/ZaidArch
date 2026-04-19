@@ -111,7 +111,7 @@ export default function Header() {
             </div>
 
             {isMenuOpen && (
-                <div className="mt-5 lg:hidden border-t border-neutral-text/30 pt-5 text-neutral-text">
+                <div className="mt-5 lg:hidden border-t border-neutral-text/10 pt-5 text-neutral-text">
                     <nav className="flex flex-col gap-4 text-2xl">
                         <a href="#top" className={getLinkClassName("#top")} onClick={() => handleLinkClick("#top")}>Accueil</a>
                         <a href="#projects" className={getLinkClassName("#projects")} onClick={() => handleLinkClick("#projects")}>Projets</a>

@@ -3,6 +3,7 @@ import image1 from "../assets/images/HomePage/1.png";
 import image2 from "../assets/images/HomePage/2.png";
 import image3 from "../assets/images/HomePage/3.png";
 import image4 from "../assets/images/HomePage/4.png";
+import ImageWithLoader from "../components/ImageWithLoader";
 
 export default function ImgsAnimation() {
     const images = [
@@ -16,7 +17,7 @@ export default function ImgsAnimation() {
 
     return (
         <div className="w-full flex flex-col gap-1 pb-2">
-            <section className="w-[100%] mx-auto overflow-hidden">
+            <section className="w-full mx-auto overflow-hidden">
                 <div className="text-marquee-track no-scrollbar">
                     {[0, 1].map((groupIndex) => (
                         <div key={groupIndex} className="text-marquee-group">
@@ -30,13 +31,13 @@ export default function ImgsAnimation() {
                 </div>
             </section>
 
-            <section className="image-marquee flex-1 w-[100%] mx-auto overflow-hidden">
+            <section className="image-marquee flex-1 w-full mx-auto overflow-hidden">
                 <div className="image-marquee-track no-scrollbar">
                     {[0, 1].map((groupIndex) => (
                         <div key={groupIndex} className="image-marquee-group">
                             {images.map((image) => (
                                 <article key={`${groupIndex}-${image.alt}`} className="image-marquee-card group relative overflow-hidden rounded-4xl">
-                                    <img
+                                    <ImageWithLoader
                                         src={image.src}
                                         alt={image.alt}
                                         className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
