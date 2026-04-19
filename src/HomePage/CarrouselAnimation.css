@@ -37,6 +37,10 @@
     will-change: transform;
 }
 
+.image-marquee-track.is-paused {
+    animation-play-state: paused;
+}
+
 .image-marquee-group {
     display: flex;
     gap: 1.5rem;

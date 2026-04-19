@@ -1,3 +1,4 @@
+import { useState } from "react";
 import './CarrouselAnimation.css'
 import image1 from "../assets/images/HomePage/1.png";
 import image2 from "../assets/images/HomePage/2.png";
@@ -6,6 +7,9 @@ import image4 from "../assets/images/HomePage/4.png";
 import ImageWithLoader from "../components/ImageWithLoader";
 
 export default function ImgsAnimation() {
+    const [isTouching, setIsTouching] = useState(false);
+    const [activeTouchCard, setActiveTouchCard] = useState(null);
+
     const images = [
         { src: image1, alt: "Zaid Architecture project 1" },
         { src: image2, alt: "Zaid Architecture project 2" },
@@ -32,21 +36,36 @@ export default function ImgsAnimation() {
             </section>
 
             <section className="image-marquee flex-1 w-full mx-auto overflow-hidden">
-                <div className="image-marquee-track no-scrollbar">
+                <div className={`image-marquee-track no-scrollbar ${isTouching ? "is-paused" : ""}`}>
                     {[0, 1].map((groupIndex) => (
                         <div key={groupIndex} className="image-marquee-group">
                             {images.map((image, imageIndex) => (
-                                <article key={`${groupIndex}-${image.alt}`} className="image-marquee-card group relative overflow-hidden rounded-4xl">
+                                <article
+                                    key={`${groupIndex}-${image.alt}`}
+                                    className="image-marquee-card group relative overflow-hidden rounded-4xl"
+                                    onTouchStart={() => {
+                                        setIsTouching(true);
+                                        setActiveTouchCard(`${groupIndex}-${imageIndex}`);
+                                    }}
+                                    onTouchEnd={() => {
+                                        setIsTouching(false);
+                                        setActiveTouchCard(null);
+                                    }}
+                                    onTouchCancel={() => {
+                                        setIsTouching(false);
+                                        setActiveTouchCard(null);
+                                    }}
+                                >
                                     <ImageWithLoader
                                         src={image.src}
                                         alt={image.alt}
                                         wrapperClassName="h-full w-full"
-                                        className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
+                                        className={`h-full w-full object-cover transition-transform duration-700 group-hover:scale-105 ${activeTouchCard === `${groupIndex}-${imageIndex}` ? "scale-105" : ""}`}
                                         loading={groupIndex === 0 ? "eager" : "lazy"}
                                         fetchPriority={groupIndex === 0 && imageIndex === 0 ? "high" : "auto"}
                                         minLoaderMs={120}
                                     />
-                                    <div className="absolute inset-0 bg-primary-soft/65 transition-opacity duration-300 group-hover:opacity-0"></div>
+                                    <div className={`absolute inset-0 bg-primary-soft/65 transition-opacity duration-300 group-hover:opacity-0 ${activeTouchCard === `${groupIndex}-${imageIndex}` ? "opacity-0" : ""}`}></div>
                                 </article>
                             ))}
                         </div>
