@@ -1,0 +1,53 @@
+import './CarrouselAnimation.css'
+import image1 from "../assets/images/HomePage/1.png";
+import image2 from "../assets/images/HomePage/2.png";
+import image3 from "../assets/images/HomePage/3.png";
+import image4 from "../assets/images/HomePage/4.png";
+
+export default function ImgsAnimation() {
+    const images = [
+        { src: image1, alt: "Zaid Architecture project 1" },
+        { src: image2, alt: "Zaid Architecture project 2" },
+        { src: image3, alt: "Zaid Architecture project 3" },
+        { src: image4, alt: "Zaid Architecture project 4" },
+    ];
+
+    const marqueeText = "Plus de 35 ans d’expérience | Vision à 360° du projet architectural et urbain.";
+
+    return (
+        <div className="w-full flex flex-col gap-1 pb-2">
+            <section className="w-[100%] mx-auto overflow-hidden">
+                <div className="text-marquee-track no-scrollbar">
+                    {[0, 1].map((groupIndex) => (
+                        <div key={groupIndex} className="text-marquee-group">
+                            {[0, 1, 2].map((lineIndex) => (
+                                <p key={`${groupIndex}-${lineIndex}`} className="text-marquee-line text-neutral-text text-sm sm:text-base font-medium">
+                                    {marqueeText}
+                                </p>
+                            ))}
+                        </div>
+                    ))}
+                </div>
+            </section>
+
+            <section className="image-marquee flex-1 w-[100%] mx-auto overflow-hidden">
+                <div className="image-marquee-track no-scrollbar">
+                    {[0, 1].map((groupIndex) => (
+                        <div key={groupIndex} className="image-marquee-group">
+                            {images.map((image) => (
+                                <article key={`${groupIndex}-${image.alt}`} className="image-marquee-card group relative overflow-hidden rounded-4xl">
+                                    <img
+                                        src={image.src}
+                                        alt={image.alt}
+                                        className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
+                                    />
+                                    <div className="absolute inset-0 bg-primary-soft/65 transition-opacity duration-300 group-hover:opacity-0"></div>
+                                </article>
+                            ))}
+                        </div>
+                    ))}
+                </div>
+            </section>
+        </div>
+    );
+}
