@@ -13,7 +13,7 @@
 
 .image-marquee-scroll {
     -webkit-overflow-scrolling: touch;
-    touch-action: pan-x;
+    touch-action: auto;
 }
 
 .text-marquee-track {
