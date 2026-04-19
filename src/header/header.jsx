@@ -87,7 +87,7 @@ export default function Header() {
                 <div className="hidden lg:flex lg:absolute lg:left-1/2 lg:-translate-x-1/2 lg:items-center lg:gap-6">
                     <nav className="flex items-center gap-8 text-neutral-text text-[20px] leading-none">
                         <a href="#top" className={getLinkClassName("#top")}>Accueil</a>
-                        <a href="#projects" className={getLinkClassName("#projects")}>Projects</a>
+                        <a href="#projects" className={getLinkClassName("#projects")}>Projets</a>
                         <a href="#agency" className={getLinkClassName("#agency")}>Agence</a>
                         <a href="#services" className={getLinkClassName("#services")}>Services</a>
                         <a href="#blogs" className={getLinkClassName("#blogs")}>Blogs</a>
@@ -114,7 +114,7 @@ export default function Header() {
                 <div className="mt-5 lg:hidden border-t border-neutral-text/30 pt-5 text-neutral-text">
                     <nav className="flex flex-col gap-4 text-2xl">
                         <a href="#top" className={getLinkClassName("#top")} onClick={() => handleLinkClick("#top")}>Accueil</a>
-                        <a href="#projects" className={getLinkClassName("#projects")} onClick={() => handleLinkClick("#projects")}>Projects</a>
+                        <a href="#projects" className={getLinkClassName("#projects")} onClick={() => handleLinkClick("#projects")}>Projets</a>
                         <a href="#agency" className={getLinkClassName("#agency")} onClick={() => handleLinkClick("#agency")}>Agence</a>
                         <a href="#services" className={getLinkClassName("#services")} onClick={() => handleLinkClick("#services")}>Services</a>
                         <a href="#blogs" className={getLinkClassName("#blogs")} onClick={() => handleLinkClick("#blogs")}>Blogs</a>
