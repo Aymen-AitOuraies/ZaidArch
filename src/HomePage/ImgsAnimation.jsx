@@ -35,7 +35,7 @@ export default function ImgsAnimation() {
                 </div>
             </section>
 
-            <section className="image-marquee flex-1 w-full mx-auto overflow-hidden">
+            <section className="image-marquee image-marquee-scroll no-scrollbar flex-1 w-full mx-auto overflow-x-auto overflow-y-hidden">
                 <div className={`image-marquee-track no-scrollbar ${isTouching ? "is-paused" : ""}`}>
                     {[0, 1].map((groupIndex) => (
                         <div key={groupIndex} className="image-marquee-group">
