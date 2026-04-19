@@ -40,6 +40,7 @@ export default function ImgsAnimation() {
                                     <ImageWithLoader
                                         src={image.src}
                                         alt={image.alt}
+                                        wrapperClassName="h-full w-full"
                                         className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
                                     />
                                     <div className="absolute inset-0 bg-primary-soft/65 transition-opacity duration-300 group-hover:opacity-0"></div>

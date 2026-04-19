@@ -25,7 +25,7 @@ export default function ImageWithLoader({
 	}, [isLoaded, minLoaderMs]);
 
 	return (
-		<div className={`relative block h-full w-full overflow-hidden ${wrapperClassName}`}>
+		<div className={`relative block overflow-hidden ${wrapperClassName}`}>
 			{!showImage && (
 				<div className="absolute inset-0 z-10 flex items-center justify-center bg-neutral-backgroundAlt/75">
 					<span
@@ -40,7 +40,7 @@ export default function ImageWithLoader({
 				alt={alt}
 				loading={loading}
 				decoding={decoding}
-				className={`block h-full w-full ${className} transition-opacity duration-300 ${showImage ? "opacity-100" : "opacity-0"}`}
+				className={`block ${className} transition-opacity duration-300 ${showImage ? "opacity-100" : "opacity-0"}`}
 				onLoad={() => setIsLoaded(true)}
 				onError={() => setIsLoaded(true)}
 			/>
