@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import HomePage from "./HomePage/HomePage";
 import AllProjectsPage from "./ProjectsPage/AllProjectsPage";
 import ProjectDetailPage from "./ProjectsPage/ProjectDetailPage";
+import BlogDetailPage from "./BlogsPage/BlogDetailPage";
 
 function App() {
   const [currentHash, setCurrentHash] = useState(window.location.hash || "#top");
@@ -24,12 +25,22 @@ function App() {
       ? "project-01"
       : "";
 
+  const blogDetailPrefix = "#blog-";
+  const isBlogDetail = currentHash.startsWith(blogDetailPrefix);
+  const activeBlogId = isBlogDetail
+    ? currentHash.slice(blogDetailPrefix.length)
+    : currentHash === "#blog-detail"
+      ? "blog-1"
+      : "";
+
   return (
     <>
       {currentHash === "#projects-all" ? (
         <AllProjectsPage />
       ) : isProjectDetail || currentHash === "#project-detail" ? (
         <ProjectDetailPage projectId={activeProjectId} />
+      ) : isBlogDetail || currentHash === "#blog-detail" ? (
+        <BlogDetailPage blogId={activeBlogId} />
       ) : (
         <HomePage />
       )}

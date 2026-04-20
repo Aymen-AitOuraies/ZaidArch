@@ -17,12 +17,14 @@ export default function BlogsPage() {
                     <span>NOS BLOGS</span>
                 </div>
 
-                <article
+                <a
+                    href="#blog-1"
+                    aria-label="Lire Blog Zaid"
                     data-reveal
                     style={{ "--reveal-delay": "120ms" }}
-                    className="reveal-on-scroll group w-full max-w-64 overflow-hidden rounded-4xl bg-primary-dark shadow-[0_34px_90px_rgba(26,36,44,0.5),0_16px_36px_rgba(26,36,44,0.28),0_0_0_1px_rgba(247,245,242,0.08)] ring-1 ring-primary-default/20 sm:max-w-80"
+                    className="reveal-on-scroll group block w-full max-w-64 overflow-hidden rounded-4xl bg-primary-dark shadow-[0_34px_90px_rgba(26,36,44,0.5),0_16px_36px_rgba(26,36,44,0.28),0_0_0_1px_rgba(247,245,242,0.08)] ring-1 ring-primary-default/20 transition-transform duration-200 hover:-translate-y-1 sm:max-w-80"
                 >
-                    <div className="relative cursor-pointer">
+                    <div className="relative">
                         <ImageWithLoader
                             src={blogImage}
                             alt="Article de blog architecture"
@@ -38,7 +40,7 @@ export default function BlogsPage() {
                             </span>
                         </div>
                     </div>
-                </article>
+                </a>
             </div>
         </section>
     );
