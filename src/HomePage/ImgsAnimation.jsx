@@ -17,6 +17,11 @@ export default function ImgsAnimation() {
             return undefined;
         }
 
+        const isTouchDevice = window.matchMedia("(pointer: coarse)").matches;
+        if (!isTouchDevice) {
+            return undefined;
+        }
+
         let groupWidth = 0;
 
         const syncWidths = () => {
@@ -75,7 +80,7 @@ export default function ImgsAnimation() {
                 </div>
             </section>
 
-            <section ref={marqueeScrollRef} className="image-marquee image-marquee-scroll no-scrollbar flex-1 w-full mx-auto overflow-x-auto overflow-y-hidden">
+            <section ref={marqueeScrollRef} className="image-marquee image-marquee-scroll no-scrollbar flex-1 w-full mx-auto overflow-x-auto overflow-y-hidden md:overflow-x-hidden">
                 <div className={`image-marquee-track no-scrollbar ${isTouching ? "is-paused" : ""}`}>
                     {[0, 1].map((groupIndex) => (
                         <div key={groupIndex} className="image-marquee-group">
