@@ -11,11 +11,6 @@
     min-height: clamp(22rem, 40vw, 34rem);
 }
 
-.image-marquee-scroll {
-    -webkit-overflow-scrolling: touch;
-    touch-action: auto;
-}
-
 .text-marquee-track {
     display: flex;
     width: max-content;

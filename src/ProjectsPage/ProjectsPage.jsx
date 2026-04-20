@@ -29,6 +29,9 @@ export default function ProjectsPage() {
 
 				<button
 					type="button"
+					onClick={() => {
+						window.location.hash = "#projects-all";
+					}}
 					data-reveal
 					className="reveal-on-scroll inline-flex items-center gap-2 rounded-full bg-primary-default px-7 py-3 text-base font-semibold text-neutral-background shadow-[0px_4px_16px_rgba(17,17,26,0.1),0px_8px_24px_rgba(17,17,26,0.1),0px_16px_56px_rgba(17,17,26,0.1)] transition-transform duration-200 hover:scale-105 cursor-pointer"
 					style={{ "--reveal-delay": "220ms" }}

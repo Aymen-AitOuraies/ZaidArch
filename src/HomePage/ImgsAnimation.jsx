@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { useState } from "react";
 import './CarrouselAnimation.css'
 import image1 from "../assets/images/HomePage/1.png";
 import image2 from "../assets/images/HomePage/2.png";
@@ -7,53 +7,7 @@ import image4 from "../assets/images/HomePage/4.png";
 import ImageWithLoader from "../components/ImageWithLoader";
 
 export default function ImgsAnimation() {
-    const [isTouching, setIsTouching] = useState(false);
     const [activeTouchCard, setActiveTouchCard] = useState(null);
-    const marqueeScrollRef = useRef(null);
-
-    useEffect(() => {
-        const container = marqueeScrollRef.current;
-        if (!container) {
-            return undefined;
-        }
-
-        const isTouchDevice = window.matchMedia("(pointer: coarse)").matches;
-        if (!isTouchDevice) {
-            return undefined;
-        }
-
-        let groupWidth = 0;
-
-        const syncWidths = () => {
-            groupWidth = container.scrollWidth / 2;
-
-            if (groupWidth > 0 && container.scrollLeft <= 0) {
-                container.scrollLeft = groupWidth / 2;
-            }
-        };
-
-        const handleScroll = () => {
-            if (!groupWidth) {
-                return;
-            }
-
-            // Wrap scroll position between duplicated groups so users never hit blank space.
-            if (container.scrollLeft <= 1) {
-                container.scrollLeft += groupWidth;
-            } else if (container.scrollLeft >= groupWidth + 1) {
-                container.scrollLeft -= groupWidth;
-            }
-        };
-
-        syncWidths();
-        container.addEventListener("scroll", handleScroll, { passive: true });
-        window.addEventListener("resize", syncWidths);
-
-        return () => {
-            container.removeEventListener("scroll", handleScroll);
-            window.removeEventListener("resize", syncWidths);
-        };
-    }, []);
 
     const images = [
         { src: image1, alt: "Zaid Architecture project 1" },
@@ -80,8 +34,8 @@ export default function ImgsAnimation() {
                 </div>
             </section>
 
-            <section ref={marqueeScrollRef} className="image-marquee image-marquee-scroll no-scrollbar flex-1 w-full mx-auto overflow-x-auto overflow-y-hidden md:overflow-x-hidden">
-                <div className={`image-marquee-track no-scrollbar ${isTouching ? "is-paused" : ""}`}>
+            <section className="image-marquee flex-1 w-full mx-auto overflow-hidden">
+                <div className="image-marquee-track no-scrollbar">
                     {[0, 1].map((groupIndex) => (
                         <div key={groupIndex} className="image-marquee-group">
                             {images.map((image, imageIndex) => (
@@ -89,15 +43,12 @@ export default function ImgsAnimation() {
                                     key={`${groupIndex}-${image.alt}`}
                                     className="image-marquee-card group relative overflow-hidden rounded-4xl"
                                     onTouchStart={() => {
-                                        setIsTouching(true);
                                         setActiveTouchCard(`${groupIndex}-${imageIndex}`);
                                     }}
                                     onTouchEnd={() => {
-                                        setIsTouching(false);
                                         setActiveTouchCard(null);
                                     }}
                                     onTouchCancel={() => {
-                                        setIsTouching(false);
                                         setActiveTouchCard(null);
                                     }}
                                 >
