@@ -92,7 +92,7 @@ export default function ProjectsPage() {
 							type="button"
 							className="inline-flex items-center rounded-full bg-primary-default px-6 py-2.5 text-base font-semibold text-neutral-background shadow-[0px_4px_16px_rgba(17,17,26,0.1),0px_8px_24px_rgba(17,17,26,0.1),0px_16px_56px_rgba(17,17,26,0.1)] transition-transform duration-200 hover:scale-105 cursor-pointer sm:px-8 sm:py-3 sm:text-lg"
 						>
-							Discuter de votre projet
+							Transformons votre vision en réalité
 						</button>
 					</div>
 
