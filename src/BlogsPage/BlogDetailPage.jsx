@@ -1,6 +1,7 @@
 import Header from "../header/header";
 import FooterPage from "../FooterPage/FooterPage";
 import { blog1 } from "./blogData";
+import { useEffect } from "react";
 
 const blogMap = {
     "blog-1": blog1,
@@ -8,6 +9,10 @@ const blogMap = {
 
 export default function BlogDetailPage({ blogId }) {
     const blog = blogMap[blogId] || blog1;
+
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, [blogId]);
 
     return (
         <main id="top" className="min-h-screen bg-[#f7f3ec] pt-28 text-neutral-text sm:pt-32">

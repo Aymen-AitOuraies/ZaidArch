@@ -17,6 +17,19 @@ function App() {
     return () => window.removeEventListener("hashchange", syncHash);
   }, []);
 
+  useEffect(() => {
+    const shouldScrollToTop =
+      currentHash === "#projects-all" ||
+      currentHash === "#project-detail" ||
+      currentHash.startsWith("#project-detail-") ||
+      currentHash === "#blog-detail" ||
+      currentHash.startsWith("#blog-");
+
+    if (shouldScrollToTop) {
+      window.scrollTo(0, 0);
+    }
+  }, [currentHash]);
+
   const projectDetailPrefix = "#project-detail-";
   const isProjectDetail = currentHash.startsWith(projectDetailPrefix);
   const activeProjectId = isProjectDetail

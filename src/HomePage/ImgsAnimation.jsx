@@ -22,7 +22,7 @@ export default function ImgsAnimation() {
         <div className="w-full flex flex-col gap-1 pb-2">
             <section className="w-full mx-auto overflow-hidden">
                 <div className="text-marquee-track no-scrollbar">
-                    {[0, 1].map((groupIndex) => (
+                    {[0, 1, 2].map((groupIndex) => (
                         <div key={groupIndex} className="text-marquee-group">
                             {[0, 1, 2].map((lineIndex) => (
                                 <p key={`${groupIndex}-${lineIndex}`} className="text-marquee-line text-neutral-text text-sm sm:text-base font-medium">

@@ -3,9 +3,14 @@ import FooterPage from "../FooterPage/FooterPage";
 import ImageWithLoader from "../components/ImageWithLoader";
 import projectsData from "./projectsData";
 import { getProjectImageSrc } from "./projectImages";
+import { useEffect } from "react";
 
 export default function ProjectDetailPage({ projectId }) {
     const project = projectsData.find((item) => item.id === projectId) || projectsData[0];
+
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, [projectId]);
 
     const projectFacts = [
         { label: "Programme", value: project.facts.programme },
@@ -32,7 +37,7 @@ export default function ProjectDetailPage({ projectId }) {
                             }}
                             className="rounded-full bg-neutral-background px-4 py-2 text-sm font-semibold text-neutral-text shadow-[0_4px_12px_rgba(17,17,26,0.12)] transition-transform duration-200 hover:scale-105"
                         >
-                            Go Back
+                            Retour
                         </button>
                     </div>
 
@@ -63,14 +68,6 @@ export default function ProjectDetailPage({ projectId }) {
                                 ))}
                             </div>
 
-                            <div className="mt-5 flex justify-end">
-                                <button
-                                    type="button"
-                                    className="rounded-full bg-neutral-background px-6 py-2 text-base font-semibold text-neutral-text shadow-[0_4px_16px_rgba(17,17,26,0.16)] transition-transform duration-200 hover:scale-105"
-                                >
-                                    Lire Plus
-                                </button>
-                            </div>
                         </div>
 
                         <div className="overflow-hidden rounded-3xl shadow-[0_20px_45px_rgba(46,58,69,0.22)]">

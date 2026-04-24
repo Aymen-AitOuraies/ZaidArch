@@ -3,6 +3,7 @@ import MenuIcon from "@mui/icons-material/Menu";
 import CloseIcon from "@mui/icons-material/Close";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
+import logoImage from "../assets/images/HomePage/logo.png";
 
 
 export default function Header() {
@@ -101,10 +102,26 @@ export default function Header() {
         setIsHeaderVisible(true);
     };
 
+    const handleLogoClick = (event) => {
+        event.preventDefault();
+        setActiveLink("#top");
+        setIsMenuOpen(false);
+        setIsHeaderVisible(true);
+        window.location.hash = "#top";
+        window.scrollTo(0, 0);
+    };
+
     return (
         <header className={`fixed top-0 left-1/2 z-100 w-[90%] -translate-x-1/2 bg-primary-soft/80 p-5 sm:p-6 px-6 sm:px-10 rounded-b-[50px] shadow-[0px_0px_0px_1px_rgba(0,0,0,0.06),0px_1px_1px_-0.5px_rgba(0,0,0,0.06),0px_3px_3px_-1.5px_rgba(0,0,0,0.06),0px_6px_6px_-3px_rgba(0,0,0,0.06),0px_12px_12px_-6px_rgba(0,0,0,0.06),0px_24px_24px_-12px_rgba(0,0,0,0.06)] backdrop-blur-sm transition-all duration-300 ${isHeaderVisible || isMenuOpen ? "translate-y-0 opacity-100" : "-translate-y-full opacity-0 pointer-events-none"}`}>
             <div className="relative flex items-center justify-between gap-4">
-                <h2 className="text-neutral-text text-2xl font-semibold">Logo</h2>
+                <a
+                    href="#top"
+                    aria-label="Retour a l'accueil"
+                    onClick={handleLogoClick}
+                    className="inline-flex items-center"
+                >
+                    <img src={logoImage} alt="Zaid Architecture" className="h-10 w-auto origin-left scale-[2.25] transform-gpu sm:h-12" />
+                </a>
 
                 <button
                     type="button"

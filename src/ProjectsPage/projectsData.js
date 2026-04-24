@@ -11,7 +11,7 @@ const projectsData = [
     facts: {
       programme: "2 500 m2 de bureau, 1 000 m2 d'activite en RDC et 24 logements",
       maitreDOuvrage: "Y.K",
-      etat: "Livre en 2013",
+      etat: "Livré en 2013",
       montantTravaux: "42 millions de dirhams"
     }
   },
@@ -27,7 +27,7 @@ const projectsData = [
     facts: {
       programme: "856 m2 d'activite en RDC et 38 logements",
       maitreDOuvrage: "J.K 2BS PROMO",
-      etat: "Livre en 2019",
+      etat: "Livré en 2019",
       montantTravaux: "16 millions de dirhams"
     }
   },
@@ -43,7 +43,7 @@ const projectsData = [
     facts: {
       programme: "7 villas + 1 equipement de proximite",
       maitreDOuvrage: "Societe Baytouna",
-      etat: "Livre en 2008",
+      etat: "Livré en 2008",
       montantTravaux: "30 millions de dirhams"
     }
   },
@@ -59,7 +59,7 @@ const projectsData = [
     facts: {
       programme: "1000 m2 de bureau, 300 m2 d'activite en RDC et 32 logements",
       maitreDOuvrage: "Groupe Kadiri/Kettani",
-      etat: "Livre en 2008",
+      etat: "Livré en 2008",
       montantTravaux: "35 millions de dirhams"
     }
   },
@@ -75,7 +75,7 @@ const projectsData = [
     facts: {
       programme: "Internat de 42 chambres et un total de 11 000 m2 couvert",
       maitreDOuvrage: "OFPPT",
-      etat: "Livre en 2018",
+      etat: "Livré en 2018",
       montantTravaux: "72 millions de dirhams"
     }
   },
@@ -91,7 +91,7 @@ const projectsData = [
     facts: {
       programme: "1400 m2 couvert comprenant des salles de classe, des ateliers et des espaces administratifs",
       maitreDOuvrage: "OFPPT",
-      etat: "Livre en 2012",
+      etat: "Livré en 2012",
       montantTravaux: "13 millions de dirhams"
     }
   },
@@ -107,7 +107,7 @@ const projectsData = [
     facts: {
       programme: "700 lits (reanimation, urgence, maternite, radiologie, ...)",
       maitreDOuvrage: "Ministere de la Sante",
-      etat: "Livre en 2006",
+      etat: "Livré en 2006",
       montantTravaux: "43 millions de dirhams"
     }
   },
@@ -123,7 +123,7 @@ const projectsData = [
     facts: {
       programme: "3500 m2",
       maitreDOuvrage: "SCI les papillons",
-      etat: "Livre en 2015",
+      etat: "Livré en 2015",
       montantTravaux: "20 millions de dirhams"
     }
   },
@@ -155,7 +155,7 @@ const projectsData = [
     facts: {
       programme: "600 logements avec activite commerciale en rez-de-chaussee",
       maitreDOuvrage: "K.M",
-      etat: "Livre en 2002",
+      etat: "Livré en 2002",
       montantTravaux: "55 millions de dirhams"
     }
   },
@@ -218,7 +218,7 @@ const projectsData = [
     facts: {
       programme: "6000 m2 de bureau, 2000 m2 d'atelier et de commerce en rez-de-chaussee",
       maitreDOuvrage: "SCI Ahram",
-      etat: "Livre en 2013",
+      etat: "Livré en 2013",
       montantTravaux: "27 millions de dirhams"
     }
   },
@@ -250,7 +250,7 @@ const projectsData = [
     facts: {
       programme: "Internat, salles de classes, bureaux administratifs, logements de la direction et refectoire",
       maitreDOuvrage: "Ministere de l'Education nationale",
-      etat: "Livre en 2012",
+      etat: "Livré en 2012",
       montantTravaux: "18 millions de dirhams"
     }
   },
@@ -266,7 +266,7 @@ const projectsData = [
     facts: {
       programme: "600 m2 d'activite",
       maitreDOuvrage: "Radiologie Ghandi 282",
-      etat: "Livre en 2016",
+      etat: "Livré en 2016",
       montantTravaux: "5 millions de dirhams"
     }
   }
