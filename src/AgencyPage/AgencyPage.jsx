@@ -1,9 +1,9 @@
-import moroccoImage from "../assets/images/AgencyPage/morocco.png";
-import compassImage from "../assets/images/AgencyPage/compass.png";
-import architectureImage from "../assets/images/AgencyPage/agency.webp";
-import creativiteIcon from "../assets/images/AgencyPage/icons/creativite.png";
-import ecouteIcon from "../assets/images/AgencyPage/icons/l'ecoute.png";
-import riguerIcon from "../assets/images/AgencyPage/icons/riguer.png";
+import moroccoImage from "/assets/images/AgencyPage/morocco.png";
+import compassImage from "/assets/images/AgencyPage/compass.png";
+import architectureImage from "/assets/images/AgencyPage/agency.webp";
+import creativiteIcon from "/assets/images/AgencyPage/icons/creativite.png";
+import ecouteIcon from "/assets/images/AgencyPage/icons/l'ecoute.png";
+import riguerIcon from "/assets/images/AgencyPage/icons/riguer.png";
 import { useState } from "react";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 import useScrollReveal from "../hooks/useScrollReveal";

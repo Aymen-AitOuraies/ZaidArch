@@ -1,9 +1,9 @@
 import { useState } from "react";
 import './CarrouselAnimation.css'
-import image1 from "../assets/images/HomePage/1.png";
-import image2 from "../assets/images/HomePage/2.png";
-import image3 from "../assets/images/HomePage/3.png";
-import image4 from "../assets/images/HomePage/4.png";
+import image1 from "/assets/images/HomePage/1.png";
+import image2 from "/assets/images/HomePage/2.png";
+import image3 from "/assets/images/HomePage/3.png";
+import image4 from "/assets/images/HomePage/4.png";
 import ImageWithLoader from "../components/ImageWithLoader";
 
 export default function ImgsAnimation() {

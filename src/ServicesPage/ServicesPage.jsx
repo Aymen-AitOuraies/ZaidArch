@@ -1,8 +1,8 @@
 import { useEffect } from "react";
-import serviceImage1 from "../assets/images/ServicesPage/1.png";
-import serviceImage2 from "../assets/images/ServicesPage/2.png";
-import serviceImage3 from "../assets/images/ServicesPage/3.png";
-import serviceImage4 from "../assets/images/ServicesPage/4.png";
+import serviceImage1 from "/assets/images/ServicesPage/1.png";
+import serviceImage2 from "/assets/images/ServicesPage/2.png";
+import serviceImage3 from "/assets/images/ServicesPage/3.png";
+import serviceImage4 from "/assets/images/ServicesPage/4.png";
 import ImageWithLoader from "../components/ImageWithLoader";
 import "./ServicesPage.css";
 

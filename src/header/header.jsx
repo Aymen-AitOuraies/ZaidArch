@@ -3,7 +3,7 @@ import MenuIcon from "@mui/icons-material/Menu";
 import CloseIcon from "@mui/icons-material/Close";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
-import logoImage from "../assets/images/HomePage/logo.png";
+import logoImage from "/assets/images/HomePage/logo.png";
 
 
 export default function Header() {

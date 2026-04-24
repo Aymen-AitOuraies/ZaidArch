@@ -1,4 +1,4 @@
-import blogImage from "../assets/images/BlogsPage/blog1.jpeg";
+import blogImage from "/assets/images/BlogsPage/blog1.jpeg";
 import useScrollReveal from "../hooks/useScrollReveal";
 import ImageWithLoader from "../components/ImageWithLoader";
 import "../animations/scrollReveal.css";
