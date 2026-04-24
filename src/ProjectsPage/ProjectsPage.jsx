@@ -1,13 +1,27 @@
 import EastIcon from "@mui/icons-material/East";
-import projectImageOne from "../assets/images/ProjectsPage/1.png";
-import projectImageTwo from "../assets/images/ProjectsPage/2.png";
-import projectImageThree from "../assets/images/ProjectsPage/3.png";
 import useScrollReveal from "../hooks/useScrollReveal";
 import ImageWithLoader from "../components/ImageWithLoader";
+import projectsData from "./projectsData";
+import { getProjectImageSrc } from "./projectImages";
 import "../animations/scrollReveal.css";
 
 export default function ProjectsPage() {
 	useScrollReveal("projects");
+
+	const featuredProjects = projectsData.slice(0, 3);
+	const getCardPreview = (text) => {
+		const maxLength = 110;
+		if (!text || text.length <= maxLength) {
+			return text;
+		}
+
+		return `${text.slice(0, maxLength).trimEnd()}...`;
+	};
+	const cardPositionClasses = [
+		"md:absolute md:left-1/2 md:top-16 md:z-10 md:-translate-x-full md:rotate-[-10deg] md:hover:rotate-0",
+		"md:absolute md:left-1/2 md:-top-3 md:z-30 md:-translate-x-1/2",
+		"md:absolute md:left-1/2 md:top-16 md:z-20 md:translate-x-[2%] md:rotate-[8deg] md:hover:rotate-0",
+	];
 
 	return (
 		<section id="projects" className="scroll-mt-32 bg-primary-soft px-6 py-10 pb-14 sm:px-10 sm:py-12 sm:pb-16 lg:px-16 lg:py-14 lg:pb-20">
@@ -46,46 +60,31 @@ export default function ProjectsPage() {
 					style={{ "--reveal-delay": "320ms" }}
 				>
 					<div className="flex flex-col items-center gap-4 md:min-h-120 md:justify-center">
-					<article className="w-72 rounded-3xl bg-neutral-background p-5 text-left shadow-[0_20px_45px_rgba(46,58,69,0.22)] transition-all duration-300 hover:z-50 hover:scale-105 md:absolute md:left-1/2 md:top-16 md:z-10 md:-translate-x-full md:rotate-[-10deg] md:hover:rotate-0 sm:w-76 md:w-80">
-						<ImageWithLoader
-							src={projectImageTwo}
-							alt="Projet architectural premium"
-							className="h-48 w-full rounded-2xl object-cover"
-						/>
-						<h3 className="mt-3 text-base font-heading font-semibold text-neutral-text">Maison Signature</h3>
-						<p className="mt-1 text-xs leading-relaxed text-neutral-text/80">
-							Une r&eacute;alisation au caract&egrave;re unique, pens&eacute;e pour le confort et l&rsquo;esth&eacute;tique.
-						</p>
-					</article>
-
-					<article className="w-72 rounded-3xl bg-neutral-background p-5 text-left shadow-[0_20px_45px_rgba(46,58,69,0.22)] transition-all duration-300 hover:z-50 hover:scale-105 md:absolute md:left-1/2 md:-top-3 md:z-30 md:-translate-x-1/2 sm:w-76 md:w-80">
-						<ImageWithLoader
-							src={projectImageOne}
-							alt="Projet architectural moderne"
-							className="h-48 w-full rounded-2xl object-cover"
-						/>
-						<h3 className="mt-3 text-base font-heading font-semibold text-neutral-text">Villa Contemporaine</h3>
-						<p className="mt-1 text-xs leading-relaxed text-neutral-text/80">
-							Un projet &eacute;l&eacute;gant qui associe lignes modernes, lumi&egrave;re naturelle et fonctionnalit&eacute; raffin&eacute;e.
-						</p>
-					</article>
-
-					<article className="w-72 rounded-3xl bg-neutral-background p-5 text-left shadow-[0_20px_45px_rgba(46,58,69,0.22)] transition-all duration-300 hover:z-50 hover:scale-105 md:absolute md:left-1/2 md:top-16 md:z-20 md:translate-x-[2%] md:rotate-[8deg] md:hover:rotate-0 sm:w-76 md:w-80">
-							<ImageWithLoader
-								src={projectImageThree}
-								alt="Projet architectural urbain"
-								className="h-48 w-full rounded-2xl object-cover"
-							/>
-							<h3 className="mt-3 text-base font-heading font-semibold text-neutral-text">R&eacute;sidence Urbaine</h3>
-							<p className="mt-1 text-xs leading-relaxed text-neutral-text/80">
-								Un design contemporain qui harmonise volumes, mati&egrave;res et lumi&egrave;re.
-							</p>
-						</article>
+						{featuredProjects.map((project, index) => (
+							<button
+								key={project.id}
+								type="button"
+								onClick={() => {
+									window.location.hash = `#project-detail-${project.id}`;
+								}}
+								className={`box-border w-[20rem] min-w-[20rem] max-w-[20rem] rounded-3xl bg-neutral-background p-5 text-left shadow-[0_20px_45px_rgba(46,58,69,0.22)] transition-all duration-300 hover:z-50 hover:scale-105 cursor-pointer ${cardPositionClasses[index] || ""}`}
+							>
+								<ImageWithLoader
+									src={getProjectImageSrc(project.image)}
+									alt={project.title}
+									className="h-48 w-full rounded-2xl object-cover"
+								/>
+								<h3 className="mt-3 text-base font-heading font-semibold text-neutral-text">{project.title}</h3>
+								<p className="mt-1 text-xs leading-relaxed text-neutral-text/80">
+									{getCardPreview(project.description[0])}
+								</p>
+							</button>
+						))}
 					</div>
 
 					<div
 						data-reveal
-						className="reveal-on-scroll mt-8 flex justify-center md:absolute md:left-1/2 md:top-100 md:z-40 md:-translate-x-1/2 md:mt-0"
+						className="reveal-on-scroll mt-20 flex justify-center md:absolute md:left-1/2 md:top-100 md:z-40 md:-translate-x-1/2 md:mt-0"
 						style={{ "--reveal-delay": "420ms" }}
 					>
 						<button
