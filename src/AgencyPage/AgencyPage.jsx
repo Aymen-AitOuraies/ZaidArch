@@ -4,7 +4,7 @@ import architectureImage from "/assets/images/AgencyPage/agency.webp";
 import creativiteIcon from "/assets/images/AgencyPage/icons/creativite.png";
 import ecouteIcon from "/assets/images/AgencyPage/icons/l'ecoute.png";
 import riguerIcon from "/assets/images/AgencyPage/icons/riguer.png";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 import useScrollReveal from "../hooks/useScrollReveal";
 import ImageWithLoader from "../components/ImageWithLoader";
@@ -19,6 +19,17 @@ export default function AgencyPage() {
 		setSlideDirection(showPptAgencyContent ? "ltr" : "rtl");
 		setShowPptAgencyContent((prev) => !prev);
 	};
+
+	useEffect(() => {
+		const autoSwitchInterval = setInterval(() => {
+			setShowPptAgencyContent((prev) => {
+				setSlideDirection(prev ? "ltr" : "rtl");
+				return !prev;
+			});
+		}, 3000);
+
+		return () => clearInterval(autoSwitchInterval);
+	}, []);
 
 	useScrollReveal("agency");
 

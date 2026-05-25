@@ -5,6 +5,9 @@ import InstagramIcon from "@mui/icons-material/Instagram";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import logoImage from "/assets/images/HomePage/logo.png";
 
+const linkedInUrl = "https://www.linkedin.com/in/zaid-architecture-60bb55408/";
+const instagramUrl = "https://www.instagram.com/zaid_architecture/";
+
 
 export default function Header() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -148,10 +151,10 @@ export default function Header() {
                 <div className="hidden lg:flex lg:items-center lg:gap-5 lg:ml-auto">
                     <span className="h-6 w-px bg-neutral-text/40" aria-hidden="true"></span>
                     <div className="flex items-center gap-3 text-neutral-text">
-                        <a href="#" aria-label="LinkedIn" className="transition-transform duration-200 hover:scale-110 hover:text-neutral-dark">
+                        <a href={linkedInUrl} target="_blank" rel="noreferrer" aria-label="LinkedIn" className="transition-transform duration-200 hover:scale-110 hover:text-neutral-dark">
                             <LinkedInIcon />
                         </a>
-                        <a href="#" aria-label="Instagram" className="transition-transform duration-200 hover:scale-110 hover:text-neutral-dark">
+                        <a href={instagramUrl} target="_blank" rel="noreferrer" aria-label="Instagram" className="transition-transform duration-200 hover:scale-110 hover:text-neutral-dark">
                             <InstagramIcon />
                         </a>
                     </div>
@@ -172,10 +175,10 @@ export default function Header() {
                             Contact
                         </a>
                         <div className="flex items-center gap-3">
-                            <a href="#" aria-label="LinkedIn" className="text-neutral-text transition-transform duration-200 hover:scale-110 hover:text-neutral-dark">
+                            <a href={linkedInUrl} target="_blank" rel="noreferrer" aria-label="LinkedIn" className="text-neutral-text transition-transform duration-200 hover:scale-110 hover:text-neutral-dark">
                                 <LinkedInIcon />
                             </a>
-                            <a href="#" aria-label="Instagram" className="text-neutral-text transition-transform duration-200 hover:scale-110 hover:text-neutral-dark">
+                            <a href={instagramUrl} target="_blank" rel="noreferrer" aria-label="Instagram" className="text-neutral-text transition-transform duration-200 hover:scale-110 hover:text-neutral-dark">
                                 <InstagramIcon />
                             </a>
                         </div>

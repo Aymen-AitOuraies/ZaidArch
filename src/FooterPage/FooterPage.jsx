@@ -11,6 +11,8 @@ const mapQuery = "46 boulevard Rahal El Meskini, Casablanca";
 const mapSrc = mapsEmbedApiKey
     ? `https://www.google.com/maps/embed/v1/place?key=${mapsEmbedApiKey}&q=${encodeURIComponent(mapQuery)}&zoom=16`
     : `https://www.google.com/maps?q=${encodeURIComponent(mapQuery)}&z=16&output=embed`;
+const linkedInUrl = "https://www.linkedin.com/in/zaid-architecture-60bb55408/";
+const instagramUrl = "https://www.instagram.com/zaid_architecture/";
 
 export default function FooterPage() {
     useScrollReveal("contact");
@@ -56,16 +58,16 @@ export default function FooterPage() {
                                 <span>Réseaux sociaux</span>
                             </div>
                             <div className="space-y-3.5">
-                                <a href="#" className="flex items-center gap-3 text-[#c69558] transition-opacity duration-200 hover:opacity-80">
+                                <a href={linkedInUrl} target="_blank" rel="noreferrer" className="flex items-center gap-3 text-[#c69558] transition-opacity duration-200 hover:opacity-80">
                                     <LinkedInIcon className="h-9! w-9! sm:h-10! sm:w-10!" />
                                     <span className="text-base leading-none text-[#ece4d8] underline decoration-1 underline-offset-4 sm:text-lg">
-                                        linkedin.com
+                                        Linkedin
                                     </span>
                                 </a>
-                                <a href="#" className="flex items-center gap-3 text-[#c69558] transition-opacity duration-200 hover:opacity-80">
+                                <a href={instagramUrl} target="_blank" rel="noreferrer" className="flex items-center gap-3 text-[#c69558] transition-opacity duration-200 hover:opacity-80">
                                     <InstagramIcon className="h-9! w-9! sm:h-10! sm:w-10!" />
                                     <span className="text-base leading-none text-[#ece4d8] underline decoration-1 underline-offset-4 sm:text-lg">
-                                        instagram.com
+                                        Instagram
                                     </span>
                                 </a>
                             </div>
