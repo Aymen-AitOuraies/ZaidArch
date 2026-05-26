@@ -23,9 +23,9 @@
 }
 
 .agency-slide-rtl {
-  animation: agency-slide-in-rtl 360ms ease-out;
+  animation: agency-slide-in-rtl 10s ease-out;
 }
 
 .agency-slide-ltr {
-  animation: agency-slide-in-ltr 360ms ease-out;
+  animation: agency-slide-in-ltr 10s ease-out;
 }
