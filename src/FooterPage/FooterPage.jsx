@@ -33,8 +33,8 @@ export default function FooterPage() {
                             </div>
                             <div className="flex items-center gap-3 text-[#c69558]">
                                 <PhoneIcon className="h-9! w-9! sm:h-10! sm:w-10!" />
-                                <a href="tel:+212512345678" className="text-base leading-none text-[#ece4d8] underline decoration-1 underline-offset-4 transition-opacity duration-200 hover:opacity-80 sm:text-lg">
-                                    +212 512345678
+                                <a href="tel:+212650161615" className="text-base leading-none text-[#ece4d8] underline decoration-1 underline-offset-4 transition-opacity duration-200 hover:opacity-80 sm:text-lg">
+                                    +212 650161615
                                 </a>
                             </div>
                         </section>

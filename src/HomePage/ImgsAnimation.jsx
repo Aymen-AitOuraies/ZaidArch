@@ -61,7 +61,7 @@ export default function ImgsAnimation() {
                                         fetchPriority={groupIndex === 0 && imageIndex === 0 ? "high" : "auto"}
                                         minLoaderMs={120}
                                     />
-                                    <div className={`absolute inset-0 bg-primary-soft/65 transition-opacity duration-300 group-hover:opacity-0 ${activeTouchCard === `${groupIndex}-${imageIndex}` ? "opacity-0" : ""}`}></div>
+                                    <div className={`pointer-events-none absolute inset-0 bg-primary-soft/65 transition-opacity duration-300 group-hover:opacity-0 ${activeTouchCard === `${groupIndex}-${imageIndex}` ? "opacity-0" : ""}`}></div>
                                 </article>
                             ))}
                         </div>

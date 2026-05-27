@@ -26,7 +26,7 @@ export default function AgencyPage() {
 				setSlideDirection(prev ? "ltr" : "rtl");
 				return !prev;
 			});
-		}, 3000);
+		}, 12000);
 
 		return () => clearInterval(autoSwitchInterval);
 	}, []);

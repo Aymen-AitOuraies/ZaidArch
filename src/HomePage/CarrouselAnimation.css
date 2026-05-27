@@ -37,6 +37,11 @@
     will-change: transform;
 }
 
+.image-marquee:hover .image-marquee-track,
+.image-marquee:focus-within .image-marquee-track {
+    animation-play-state: paused;
+}
+
 .image-marquee-track.is-paused {
     animation-play-state: paused;
 }
