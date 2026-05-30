@@ -115,7 +115,7 @@ export default function Header() {
     };
 
     return (
-        <header className={`fixed top-0 left-1/2 z-100 w-[90%] -translate-x-1/2 bg-accent-greenHeader/80 p-5 sm:p-6 px-6 sm:px-10 rounded-b-[50px] shadow-[0px_0px_0px_1px_rgba(0,0,0,0.06),0px_1px_1px_-0.5px_rgba(0,0,0,0.06),0px_3px_3px_-1.5px_rgba(0,0,0,0.06),0px_6px_6px_-3px_rgba(0,0,0,0.06),0px_12px_12px_-6px_rgba(0,0,0,0.06),0px_24px_24px_-12px_rgba(0,0,0,0.06)] backdrop-blur-sm transition-all duration-300 ${isHeaderVisible || isMenuOpen ? "translate-y-0 opacity-100" : "-translate-y-full opacity-0 pointer-events-none"}`}>
+        <header className={`fixed top-0 left-1/2 z-100 w-[90%] -translate-x-1/2 bg-accent-greenBeige/72 p-5 sm:p-6 px-6 sm:px-10 rounded-b-[50px] shadow-[0px_0px_0px_1px_rgba(0,0,0,0.06),0px_1px_1px_-0.5px_rgba(0,0,0,0.06),0px_3px_3px_-1.5px_rgba(0,0,0,0.06),0px_6px_6px_-3px_rgba(0,0,0,0.06),0px_12px_12px_-6px_rgba(0,0,0,0.06),0px_24px_24px_-12px_rgba(0,0,0,0.06)] backdrop-blur-sm transition-all duration-300 ${isHeaderVisible || isMenuOpen ? "translate-y-0 opacity-100" : "-translate-y-full opacity-0 pointer-events-none"}`}>
             <div className="relative flex items-center justify-between gap-4">
                 <a
                     href="#top"
@@ -128,7 +128,7 @@ export default function Header() {
 
                 <button
                     type="button"
-                    className="lg:hidden text-neutral-text"
+                    className="lg:hidden text-[#2E3A45]"
                     aria-label={isMenuOpen ? "Close menu" : "Open menu"}
                     onClick={() => setIsMenuOpen((prev) => !prev)}
                 >
@@ -136,7 +136,7 @@ export default function Header() {
                 </button>
 
                 <div className="hidden lg:flex lg:absolute lg:left-1/2 lg:-translate-x-1/2 lg:items-center lg:gap-6">
-                    <nav className="flex items-center gap-8 text-neutral-text text-[20px] leading-none">
+                    <nav className="flex items-center gap-8 text-[#F7F5F2] text-[20px] leading-none drop-shadow-[0_1px_1px_rgba(0,0,0,0.16)]">
                         <a href="#top" className={getLinkClassName("#top")}>Accueil</a>
                         <a href="#projects" className={getLinkClassName("#projects")}>Projets</a>
                         <a href="#agency" className={getLinkClassName("#agency")}>Agence</a>
@@ -149,12 +149,12 @@ export default function Header() {
                 </div>
 
                 <div className="hidden lg:flex lg:items-center lg:gap-5 lg:ml-auto">
-                    <span className="h-6 w-px bg-neutral-text/40" aria-hidden="true"></span>
-                    <div className="flex items-center gap-3 text-neutral-text">
-                        <a href={linkedInUrl} target="_blank" rel="noreferrer" aria-label="LinkedIn" className="transition-transform duration-200 hover:scale-110 hover:text-neutral-dark">
+                    <span className="h-6 w-px bg-[#F7F5F2]/35" aria-hidden="true"></span>
+                    <div className="flex items-center gap-3 text-[#F7F5F2] drop-shadow-[0_1px_1px_rgba(0,0,0,0.16)]">
+                        <a href={linkedInUrl} target="_blank" rel="noreferrer" aria-label="LinkedIn" className="transition-transform duration-200 hover:scale-110 hover:text-[#EDE8E1]">
                             <LinkedInIcon />
                         </a>
-                        <a href={instagramUrl} target="_blank" rel="noreferrer" aria-label="Instagram" className="transition-transform duration-200 hover:scale-110 hover:text-neutral-dark">
+                        <a href={instagramUrl} target="_blank" rel="noreferrer" aria-label="Instagram" className="transition-transform duration-200 hover:scale-110 hover:text-[#EDE8E1]">
                             <InstagramIcon />
                         </a>
                     </div>
@@ -162,7 +162,7 @@ export default function Header() {
             </div>
 
             {isMenuOpen && (
-                <div className="mt-5 lg:hidden border-t border-neutral-text/30 pt-5 text-neutral-text">
+                <div className="mt-5 lg:hidden border-t border-[#F7F5F2]/30 pt-5 text-[#F7F5F2]">
                     <nav className="flex flex-col gap-4 text-2xl">
                         <a href="#top" className={getLinkClassName("#top")} onClick={() => handleLinkClick("#top")}>Accueil</a>
                         <a href="#projects" className={getLinkClassName("#projects")} onClick={() => handleLinkClick("#projects")}>Projets</a>
@@ -171,14 +171,14 @@ export default function Header() {
                         <a href="#blogs" className={getLinkClassName("#blogs")} onClick={() => handleLinkClick("#blogs")}>Blogs</a>
                     </nav>
                     <div className="mt-5 flex items-center justify-between gap-4">
-                        <a href="#contact" onClick={() => setIsMenuOpen(false)} className={`${activeLink === "#contact" ? "font-bold" : "font-medium"} bg-neutral-text text-neutral-backgroundAlt px-5 py-2 rounded-full text-base transition-all duration-200 hover:bg-neutral-dark hover:scale-105`}>
+                        <a href="#contact" onClick={() => setIsMenuOpen(false)} className={`${activeLink === "#contact" ? "font-bold" : "font-medium"} bg-[#F7F5F2] text-[#2E3A45] px-5 py-2 rounded-full text-base transition-all duration-200 hover:bg-[#EDE8E1] hover:scale-105`}>
                             Contact
                         </a>
                         <div className="flex items-center gap-3">
-                            <a href={linkedInUrl} target="_blank" rel="noreferrer" aria-label="LinkedIn" className="text-neutral-text transition-transform duration-200 hover:scale-110 hover:text-neutral-dark">
+                            <a href={linkedInUrl} target="_blank" rel="noreferrer" aria-label="LinkedIn" className="text-[#F7F5F2] transition-transform duration-200 hover:scale-110 hover:text-[#EDE8E1]">
                                 <LinkedInIcon />
                             </a>
-                            <a href={instagramUrl} target="_blank" rel="noreferrer" aria-label="Instagram" className="text-neutral-text transition-transform duration-200 hover:scale-110 hover:text-neutral-dark">
+                            <a href={instagramUrl} target="_blank" rel="noreferrer" aria-label="Instagram" className="text-[#F7F5F2] transition-transform duration-200 hover:scale-110 hover:text-[#EDE8E1]">
                                 <InstagramIcon />
                             </a>
                         </div>

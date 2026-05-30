@@ -10,13 +10,15 @@ import "./PageLoadAnimation.css";
 
 export default function HomePage() {
     return (
-        <main id="top" className="min-h-screen flex flex-col pt-28 sm:pt-32">
+        <main id="top" className="flex min-h-screen flex-col overflow-hidden bg-[#111820] pt-28 sm:pt-32">
             <Header />
-            <div className="page-enter page-enter-1">
-                <HeroTitleSection />
-            </div>
-            <div className="page-enter page-enter-2">
-                <ImgsAnimation />
+            <div className="flex min-h-[calc(100vh-7rem)] flex-1 flex-col justify-center bg-[linear-gradient(180deg,#111820_0%,#18212a_55%,#111820_100%)] text-primary-soft/85 shadow-[inset_0_1px_0_rgba(255,255,255,0.04)] sm:min-h-[calc(100vh-8rem)]">
+                <div className="page-enter page-enter-1">
+                    <HeroTitleSection />
+                </div>
+                <div className="page-enter page-enter-2">
+                    <ImgsAnimation />
+                </div>
             </div>
             <ProjectsPage />
             <AgencyPage />

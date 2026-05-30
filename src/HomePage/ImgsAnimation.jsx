@@ -8,6 +8,7 @@ import ImageWithLoader from "../components/ImageWithLoader";
 
 export default function ImgsAnimation() {
     const [activeTouchCard, setActiveTouchCard] = useState(null);
+    const [activeHoverCard, setActiveHoverCard] = useState(null);
 
     const images = [
         { src: image1, alt: "Zaid Architecture project 1" },
@@ -25,7 +26,7 @@ export default function ImgsAnimation() {
                     {[0, 1, 2].map((groupIndex) => (
                         <div key={groupIndex} className="text-marquee-group">
                             {[0, 1, 2].map((lineIndex) => (
-                                <p key={`${groupIndex}-${lineIndex}`} className="text-marquee-line text-neutral-text text-sm sm:text-base font-medium">
+                                <p key={`${groupIndex}-${lineIndex}`} className="text-marquee-line text-primary-soft/85 text-sm sm:text-base font-medium">
                                     {marqueeText}
                                 </p>
                             ))}
@@ -35,13 +36,19 @@ export default function ImgsAnimation() {
             </section>
 
             <section className="image-marquee flex-1 w-full mx-auto overflow-hidden">
-                <div className="image-marquee-track no-scrollbar">
+                <div className={`image-marquee-track no-scrollbar ${activeHoverCard ? "is-paused" : ""}`}>
                     {[0, 1].map((groupIndex) => (
                         <div key={groupIndex} className="image-marquee-group">
                             {images.map((image, imageIndex) => (
                                 <article
                                     key={`${groupIndex}-${image.alt}`}
                                     className="image-marquee-card group relative overflow-hidden rounded-4xl"
+                                    onMouseEnter={() => {
+                                        setActiveHoverCard(`${groupIndex}-${imageIndex}`);
+                                    }}
+                                    onMouseLeave={() => {
+                                        setActiveHoverCard(null);
+                                    }}
                                     onTouchStart={() => {
                                         setActiveTouchCard(`${groupIndex}-${imageIndex}`);
                                     }}
@@ -56,12 +63,12 @@ export default function ImgsAnimation() {
                                         src={image.src}
                                         alt={image.alt}
                                         wrapperClassName="h-full w-full"
-                                        className={`h-full w-full object-cover transition-transform duration-700 group-hover:scale-105 ${activeTouchCard === `${groupIndex}-${imageIndex}` ? "scale-105" : ""}`}
+                                        className={`h-full w-full object-cover transition-transform duration-700 ${activeHoverCard === `${groupIndex}-${imageIndex}` || activeTouchCard === `${groupIndex}-${imageIndex}` ? "scale-105" : ""}`}
                                         loading={groupIndex === 0 ? "eager" : "lazy"}
                                         fetchPriority={groupIndex === 0 && imageIndex === 0 ? "high" : "auto"}
                                         minLoaderMs={120}
                                     />
-                                    <div className={`pointer-events-none absolute inset-0 bg-primary-soft/65 transition-opacity duration-300 group-hover:opacity-0 ${activeTouchCard === `${groupIndex}-${imageIndex}` ? "opacity-0" : ""}`}></div>
+                                    <div className={`pointer-events-none absolute inset-0 bg-[#ece4d8]/60 transition-opacity duration-300 ${activeHoverCard === `${groupIndex}-${imageIndex}` || activeTouchCard === `${groupIndex}-${imageIndex}` ? "opacity-0" : "opacity-100"}`}></div>
                                 </article>
                             ))}
                         </div>

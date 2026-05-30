@@ -60,11 +60,11 @@ export default function ServicesPage() {
 	return (
 		<section
 			id="services"
-			className="scroll-mt-32 bg-neutral-backgroundAlt px-6 py-20 sm:px-10 lg:px-16 lg:py-24"
+			className="scroll-mt-32 bg-[linear-gradient(180deg,#111820_0%,#18212a_45%,#111820_100%)] px-6 py-20 text-neutral-background sm:px-10 lg:px-16 lg:py-24"
 		>
 			<div className="mx-auto w-full max-w-6xl">
-				<div className="mb-10 flex items-center gap-2 font-heading text-sm font-bold tracking-[0.2em] text-primary-default sm:text-base">
-					<span className="h-2 w-2 rounded-full bg-primary-default" aria-hidden="true"></span>
+				<div className="mb-10 flex items-center gap-2 font-heading text-sm font-bold tracking-[0.2em] text-[#d9c3a7] sm:text-base">
+					<span className="h-2 w-2 rounded-full bg-[#d9c3a7]" aria-hidden="true"></span>
 					<span>NOS SERVICES</span>
 				</div>
 
@@ -73,7 +73,7 @@ export default function ServicesPage() {
 						<article
 							key={service.title}
 							data-service-card
-							className="service-card group overflow-hidden rounded-3xl bg-neutral-backgroundAlt shadow-[0_14px_30px_rgba(26,36,44,0.2)]"
+							className="service-card group overflow-hidden rounded-3xl bg-[linear-gradient(180deg,rgba(24,33,42,0.96)_0%,rgba(17,24,32,0.98)_100%)] shadow-[0_22px_50px_rgba(0,0,0,0.34)]"
 							style={{ "--card-delay": `${index * 120}ms` }}
 						>
 							<ImageWithLoader
@@ -82,8 +82,8 @@ export default function ServicesPage() {
 								className="h-52 w-full object-cover transition-transform duration-500 group-hover:scale-105 sm:h-56"
 							/>
 							<div className="p-5 sm:p-6">
-								<h3 className="font-heading text-2xl font-semibold text-neutral-text">{service.title}</h3>
-								<p className="mt-2 text-sm leading-relaxed text-neutral-text/85 sm:text-base">
+								<h3 className="font-heading text-2xl font-semibold text-[#ece4d8]">{service.title}</h3>
+								<p className="mt-2 text-sm leading-relaxed text-[#cfd7de] sm:text-base">
 									{service.description}
 								</p>
 							</div>

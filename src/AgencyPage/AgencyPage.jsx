@@ -1,6 +1,6 @@
 import moroccoImage from "/assets/images/AgencyPage/morocco.png";
 import compassImage from "/assets/images/AgencyPage/compass.png";
-import architectureImage from "/assets/images/AgencyPage/agency.webp";
+import architectureImage from "/assets/images/AgencyPage/zaid.jpeg";
 import creativiteIcon from "/assets/images/AgencyPage/icons/creativite.png";
 import ecouteIcon from "/assets/images/AgencyPage/icons/l'ecoute.png";
 import riguerIcon from "/assets/images/AgencyPage/icons/riguer.png";

@@ -46,8 +46,8 @@ export default function FooterPage() {
                             </div>
                             <div className="flex items-center gap-3 text-[#c69558]">
                                 <MailIcon className="h-9! w-9! sm:h-10! sm:w-10!" />
-                                <a href="mailto:username@gmail.com" className="text-base leading-none text-[#ece4d8] underline decoration-1 underline-offset-4 transition-opacity duration-200 hover:opacity-80 sm:text-lg">
-                                    username@gmail.com
+                                <a href="mailto:zaidarchitecture@outlook.fr" className="text-base leading-none text-[#ece4d8] underline decoration-1 underline-offset-4 transition-opacity duration-200 hover:opacity-80 sm:text-lg">
+                                    zaidarchitecture@outlook.fr
                                 </a>
                             </div>
                         </section>
@@ -61,13 +61,13 @@ export default function FooterPage() {
                                 <a href={linkedInUrl} target="_blank" rel="noreferrer" className="flex items-center gap-3 text-[#c69558] transition-opacity duration-200 hover:opacity-80">
                                     <LinkedInIcon className="h-9! w-9! sm:h-10! sm:w-10!" />
                                     <span className="text-base leading-none text-[#ece4d8] underline decoration-1 underline-offset-4 sm:text-lg">
-                                        Linkedin
+                                        Zaid Architecture
                                     </span>
                                 </a>
                                 <a href={instagramUrl} target="_blank" rel="noreferrer" className="flex items-center gap-3 text-[#c69558] transition-opacity duration-200 hover:opacity-80">
                                     <InstagramIcon className="h-9! w-9! sm:h-10! sm:w-10!" />
                                     <span className="text-base leading-none text-[#ece4d8] underline decoration-1 underline-offset-4 sm:text-lg">
-                                        Instagram
+                                        zaid_architecture
                                     </span>
                                 </a>
                             </div>

@@ -16,7 +16,8 @@ export default {
                 },
                 accent: {
                     green: "#4A6741",
-                    greenHeader: "#6F8F64",
+                    greenHeader: "#7A8A66",
+                    greenBeige: "#9A8F74",
                     greenLight: "#B6C0B5"
                 }
             },
