@@ -16,7 +16,7 @@ export default function HomePage() {
                 <div className="page-enter page-enter-1">
                     <HeroTitleSection />
                 </div>
-                <div className="page-enter page-enter-2">
+                <div className="page-enter page-enter-2 mt-1">
                     <ImgsAnimation />
                 </div>
             </div>
