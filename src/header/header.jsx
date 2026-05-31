@@ -115,7 +115,7 @@ export default function Header() {
     };
 
     return (
-        <header className={`fixed top-0 left-1/2 z-100 w-[90%] -translate-x-1/2 bg-accent-greenBeige/72 p-5 sm:p-6 px-6 sm:px-10 rounded-b-[50px] shadow-[0px_0px_0px_1px_rgba(0,0,0,0.06),0px_1px_1px_-0.5px_rgba(0,0,0,0.06),0px_3px_3px_-1.5px_rgba(0,0,0,0.06),0px_6px_6px_-3px_rgba(0,0,0,0.06),0px_12px_12px_-6px_rgba(0,0,0,0.06),0px_24px_24px_-12px_rgba(0,0,0,0.06)] backdrop-blur-sm transition-all duration-300 ${isHeaderVisible || isMenuOpen ? "translate-y-0 opacity-100" : "-translate-y-full opacity-0 pointer-events-none"}`}>
+        <header className={`fixed top-5 left-1/2 z-100 w-[90%] -translate-x-1/2 bg-accent-greenBeige/72 p-5 sm:p-6 px-6 sm:px-10 rounded-[50px] shadow-[0px_0px_0px_1px_rgba(0,0,0,0.06),0px_1px_1px_-0.5px_rgba(0,0,0,0.06),0px_3px_3px_-1.5px_rgba(0,0,0,0.06),0px_6px_6px_-3px_rgba(0,0,0,0.06),0px_12px_12px_-6px_rgba(0,0,0,0.06),0px_24px_24px_-12px_rgba(0,0,0,0.06)] backdrop-blur-sm transition-all duration-300 ${isHeaderVisible || isMenuOpen ? "translate-y-0 opacity-100" : "-translate-y-full opacity-0 pointer-events-none"}`}>
             <div className="relative flex items-center justify-between gap-4">
                 <a
                     href="#top"
