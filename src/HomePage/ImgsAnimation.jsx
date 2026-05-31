@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
 import './CarrouselAnimation.css'
 import image1 from "/assets/images/HomePage/1.png";
 import image2 from "/assets/images/HomePage/2.png";
@@ -9,6 +9,7 @@ import ImageWithLoader from "../components/ImageWithLoader";
 export default function ImgsAnimation() {
     const [activeTouchCard, setActiveTouchCard] = useState(null);
     const [activeHoverCard, setActiveHoverCard] = useState(null);
+    const touchTimeoutRef = useRef(null);
 
     const images = [
         { src: image1, alt: "Zaid Architecture project 1" },
@@ -36,7 +37,7 @@ export default function ImgsAnimation() {
             </section>
 
             <section className="image-marquee flex-1 w-full mx-auto overflow-hidden">
-                <div className={`image-marquee-track no-scrollbar ${activeHoverCard ? "is-paused" : ""}`}>
+                <div className={`image-marquee-track no-scrollbar ${activeHoverCard || activeTouchCard ? "is-paused" : ""}`}>
                     {[0, 1].map((groupIndex) => (
                         <div key={groupIndex} className="image-marquee-group">
                             {images.map((image, imageIndex) => (
@@ -50,12 +51,18 @@ export default function ImgsAnimation() {
                                         setActiveHoverCard(null);
                                     }}
                                     onTouchStart={() => {
+                                        if (touchTimeoutRef.current) clearTimeout(touchTimeoutRef.current);
                                         setActiveTouchCard(`${groupIndex}-${imageIndex}`);
+                                        touchTimeoutRef.current = setTimeout(() => {
+                                            setActiveTouchCard(null);
+                                        }, 2000);
                                     }}
                                     onTouchEnd={() => {
+                                        if (touchTimeoutRef.current) clearTimeout(touchTimeoutRef.current);
                                         setActiveTouchCard(null);
                                     }}
                                     onTouchCancel={() => {
+                                        if (touchTimeoutRef.current) clearTimeout(touchTimeoutRef.current);
                                         setActiveTouchCard(null);
                                     }}
                                 >
