@@ -1,6 +1,6 @@
 import moroccoImage from "/assets/images/AgencyPage/morocco.png";
 import compassImage from "/assets/images/AgencyPage/compass.png";
-import architectureImage from "/assets/images/AgencyPage/zaid.jpeg";
+import architectureImage from "/assets/images/AgencyPage/zaid.png";
 import creativiteIcon from "/assets/images/AgencyPage/icons/creativite.png";
 import ecouteIcon from "/assets/images/AgencyPage/icons/l'ecoute.png";
 import riguerIcon from "/assets/images/AgencyPage/icons/riguer.png";
@@ -140,7 +140,7 @@ export default function AgencyPage() {
 							<ul className="max-w-2xl space-y-2 text-left text-lg font-medium leading-snug text-neutral-text sm:text-xl lg:ml-auto lg:max-w-136 lg:pl-4">
 								<li className="flex items-start gap-3">
 									<span className="mt-2.5 h-2 w-2 rounded-full bg-neutral-text shrink-0" aria-hidden="true"></span>
-									<span>Plus de 35 ans d&rsquo;exp&eacute;rience combin&eacute;s avec le regard neuf d&rsquo;un nouvel associ&eacute;.</span>
+									<span>Plus de 40 ans d&rsquo;exp&eacute;rience combin&eacute;s avec le regard neuf d&rsquo;un nouvel associ&eacute;.</span>
 								</li>
 								<li className="flex items-start gap-3">
 									<span className="mt-2.5 h-2 w-2 rounded-full bg-neutral-text shrink-0" aria-hidden="true"></span>

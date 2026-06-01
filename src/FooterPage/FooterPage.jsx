@@ -6,11 +6,9 @@ import LocationOnIcon from "@mui/icons-material/LocationOn";
 import useScrollReveal from "../hooks/useScrollReveal";
 import "../animations/scrollReveal.css";
 
-const mapsEmbedApiKey = import.meta.env.VITE_GOOGLE_MAPS_EMBED_API_KEY;
+const mapSrc = "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3323.852856846827!2d-7.5894!3d33.5731!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xda7d28ab3b5b5b5b%3A0x1234567890abcdef!2s46%20Boulevard%20Rahal%20El%20Meskini%2C%20Casablanca%2C%20Morocco!5e0!3m2!1sen!2s!4v";
 const mapQuery = "46 boulevard Rahal El Meskini, Casablanca";
-const mapSrc = mapsEmbedApiKey
-    ? `https://www.google.com/maps/embed/v1/place?key=${mapsEmbedApiKey}&q=${encodeURIComponent(mapQuery)}&zoom=16`
-    : `https://www.google.com/maps?q=${encodeURIComponent(mapQuery)}&z=16&output=embed`;
+const googleMapsShortLink = "https://maps.app.goo.gl/rR5QXFhUiAJtSRUMA";
 const linkedInUrl = "https://www.linkedin.com/in/zaid-architecture-60bb55408/";
 const instagramUrl = "https://www.instagram.com/zaid_architecture/";
 

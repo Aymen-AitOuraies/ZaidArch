@@ -35,11 +35,10 @@ export default function ProjectsPage() {
 
 				<p
 					data-reveal
-					className="reveal-on-scroll max-w-2xl text-base leading-relaxed text-neutral-text/80 sm:text-lg"
+					className="reveal-on-scroll max-w-2xl text-base leading-relaxed text-neutral-text/80 sm:text-lg font-bold"
 					style={{ "--reveal-delay": "120ms" }}
 				>
-					Explorez nos projets o&ugrave; cr&eacute;ativit&eacute;, pr&eacute;cision et excellence<br className="hidden sm:block" /> architecturale se combinent.
-				</p>
+						EXPLOREZ NOS PROJETS.</p>
 
 				<button
 					type="button"

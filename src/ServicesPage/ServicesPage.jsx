@@ -19,7 +19,7 @@ const services = [
 	},
 	{
 		image: serviceImage3,
-		title: "Design Accompagnement de Projet Professionnel",
+		title: "Accompagnement projets immobiliers",
 		description: "Suivi et coordination experts à chaque étape de votre projet.",
 	},
 	{
