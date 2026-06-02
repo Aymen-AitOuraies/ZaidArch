@@ -18,24 +18,9 @@ export default function ImgsAnimation() {
         { src: image4, alt: "Zaid Architecture project 4" },
     ];
 
-    const marqueeText = "Plus de 35 ans d’expérience | Vision à 360° du projet architectural et urbain.";
 
     return (
         <div className="w-full flex flex-col gap-1 pb-2">
-            <section className="w-full mx-auto overflow-hidden">
-                <div className="text-marquee-track no-scrollbar">
-                    {[0, 1, 2].map((groupIndex) => (
-                        <div key={groupIndex} className="text-marquee-group">
-                            {[0, 1, 2].map((lineIndex) => (
-                                <p key={`${groupIndex}-${lineIndex}`} className="text-marquee-line text-primary-soft/85 text-sm sm:text-base font-medium">
-                                    {marqueeText}
-                                </p>
-                            ))}
-                        </div>
-                    ))}
-                </div>
-            </section>
-
             <section className="image-marquee flex-1 w-full mx-auto overflow-hidden">
                 <div className={`image-marquee-track no-scrollbar ${activeHoverCard || activeTouchCard ? "is-paused" : ""}`}>
                     {[0, 1].map((groupIndex) => (

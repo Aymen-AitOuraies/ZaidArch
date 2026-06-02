@@ -190,11 +190,11 @@ export default function AgencyPage() {
 								</div>
 							</div>
 
-							<div className="w-full max-w-md lg:ml-auto">
+							<div className="w-full max-w-5xl lg:ml-auto">
 								<ImageWithLoader
 									src={architectureImage}
 									alt="Architecture moderne"
-									className="h-56 w-full rounded-3xl object-cover shadow-[0_20px_45px_rgba(46,58,69,0.22)] sm:h-64"
+									className="w-full rounded-3xl object-cover shadow-[0_20px_45px_rgba(46,58,69,0.22)] h-64 sm:h-72 lg:h-80"
 								/>
 								<blockquote className="mt-4 text-base italic leading-relaxed text-neutral-text/90 sm:text-lg">
 									"Nous concevons des espaces qui racontent votre vision et s&rsquo;inscrivent durablement dans leur environnement."

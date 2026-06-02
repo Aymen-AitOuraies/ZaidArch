@@ -11,9 +11,9 @@ export default function BlogsPage() {
             <div className="mx-auto flex w-full max-w-6xl flex-col items-start">
                 <div
                     data-reveal
-                    className="reveal-on-scroll mb-8 flex items-center gap-2 font-heading text-sm font-bold tracking-[0.2em] text-primary-default sm:text-base"
+                    className="reveal-on-scroll mb-8 flex items-center gap-2 font-heading text-sm font-bold tracking-[0.2em] text-neutral-text sm:text-base"
                 >
-                    <span className="h-2 w-2 rounded-full bg-primary-default" aria-hidden="true"></span>
+                    <span className="h-2 w-2 rounded-full bg-neutral-text" aria-hidden="true"></span>
                     <span>NOS BLOGS</span>
                 </div>
 
