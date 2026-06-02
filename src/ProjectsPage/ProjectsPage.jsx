@@ -58,7 +58,7 @@ export default function ProjectsPage() {
 					className="reveal-on-scroll relative mt-6 w-full max-w-5xl"
 					style={{ "--reveal-delay": "320ms" }}
 				>
-					<div className="flex flex-col items-center gap-4 md:min-h-120 md:justify-center">
+					<div className="flex flex-col items-center gap-4 md:min-h-120 md:justify-center mb-10">
 						{featuredProjects.map((project, index) => (
 							<button
 								key={project.id}
@@ -83,7 +83,7 @@ export default function ProjectsPage() {
 
 					<div
 						data-reveal
-						className="reveal-on-scroll mt-20 flex justify-center md:absolute md:left-1/2 md:top-100 md:z-40 md:-translate-x-1/2 md:mt-0"
+						className="reveal-on-scroll mt-40 flex justify-center md:absolute md:left-1/2 md:top-105 md:z-40 md:-translate-x-1/2 md:mt-0"
 						style={{ "--reveal-delay": "420ms" }}
 					>
 						<button
